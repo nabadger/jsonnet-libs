@@ -255,9 +255,9 @@ k {
     rbac(name, rules)::
       if $._config.enable_rbac
       then {
-        local clusterRole = $.rbac.v1beta1.clusterRole,
-        local clusterRoleBinding = $.rbac.v1beta1.clusterRoleBinding,
-        local subject = $.rbac.v1beta1.subject,
+        local clusterRole = $.rbac.v1.clusterRole,
+        local clusterRoleBinding = $.rbac.v1.clusterRoleBinding,
+        local subject = $.rbac.v1.subject,
         local serviceAccount = $.core.v1.serviceAccount,
 
         service_account:
@@ -286,9 +286,9 @@ k {
     namespacedRBAC(name, rules)::
       if $._config.enable_rbac
       then {
-        local role = $.rbac.v1beta1.role,
-        local roleBinding = $.rbac.v1beta1.roleBinding,
-        local subject = $.rbac.v1beta1.subject,
+        local role = $.rbac.v1.role,
+        local roleBinding = $.rbac.v1.roleBinding,
+        local subject = $.rbac.v1.subject,
         local serviceAccount = $.core.v1.serviceAccount,
 
         service_account:
